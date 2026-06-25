@@ -1,0 +1,1 @@
+- next step: "Modify it so only one accordion stays open at a time"

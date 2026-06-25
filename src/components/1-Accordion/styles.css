@@ -1,0 +1,13 @@
+.accordion {
+  border: 2px solid black;
+  margin: 1rem 0;
+  padding: 2rem;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  font-size: xx-large;
+}
