@@ -1,21 +1,20 @@
 import { useState } from 'react';
 import './styles.css';
 
-const Qna = ({ qnaData }) => {
-  const [toggle, setToggle] = useState(false);
+const Qna = ({ qnaData, showAns }) => {
   return (
     <div className='inner-div'>
       <h3>
         {qnaData?.question}
         <span
           onClick={() => {
-            setToggle(!toggle);
+            // setToggle(!toggle);
           }}
         >
           +
         </span>
       </h3>
-      {toggle && <p>{qnaData.answer}</p>}
+      {showAns && qnaData.answer}
     </div>
   );
 };
