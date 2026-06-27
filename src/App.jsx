@@ -23,9 +23,14 @@ const tabsData = [
 ];
 
 function App() {
+
+const onTabChange = (index)=>{
+  console.log("Tab changed and index is : ",index);
+}
+
   return (
     <>
-      <Tabs tabsData={tabsData} />
+      <Tabs tabsData={tabsData} onTabChange={onTabChange}/>
     </>
   );
 }

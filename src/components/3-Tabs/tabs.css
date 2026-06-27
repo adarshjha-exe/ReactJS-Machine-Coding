@@ -1,0 +1,15 @@
+.tabs__content {
+  border: 2px solid black;
+  height: 20rem;
+  width: 16rem;
+  border-top: none;
+  display: flex;
+  align-items: center; /* vertical center*/
+  justify-content: center; /* Horizontal center*/
+}
+
+.active {
+  border-bottom: none;
+  color: red;
+  background-color: white;
+}

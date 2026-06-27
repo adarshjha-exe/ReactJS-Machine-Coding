@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import './tabs.css';
 
-const Tabs = ({ tabsData }) => {
+const Tabs = ({ tabsData, onTabChange }) => {
+  //   console.log(onTabChange);
   const [currentIdx, setCurrentIdx] = useState(0);
   return (
     <div>
@@ -9,8 +11,10 @@ const Tabs = ({ tabsData }) => {
         {tabsData.map((item, index) => {
           return (
             <button
+              className={`${index === currentIdx ? 'active' : ''}`}
               onClick={() => {
                 setCurrentIdx(index);
+                onTabChange(index);
               }}
             >
               {item.label}
@@ -18,7 +22,7 @@ const Tabs = ({ tabsData }) => {
           );
         })}
       </div>
-      <div>
+      <div className='tabs__content'>
         {/* content */}
         {tabsData[currentIdx].content}
       </div>
